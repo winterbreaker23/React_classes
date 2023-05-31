@@ -46,9 +46,29 @@ class Car5 extends React.Component{
   }
 }
 
+class Car7 extends React.Component{
+  constructor(props){
+    super(props);
+    this.state = {
+      brand:"ford",
+      color:"black",
+      year:1964,
+      model:"mustang"
+    };
+  }
+  render(){
+    return(
+    <div>
+      <h1>my {this.state.brand}</h1>
+      <p>The color is {this.state.color}</p>
+      <p>the model is {this.state.model}</p>
+    </div>
+    );
+  }
+}
 root.render(
   <React.StrictMode>
-    <Car6/>
+    <Car7/>
   </React.StrictMode>
 );
 
