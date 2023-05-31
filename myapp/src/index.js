@@ -96,9 +96,30 @@ class Header2 extends React.Component{
     );
   }
 }
+
+class Header3 extends React.Component{
+  constructor(props) {
+    super(props);
+    this.state = {favoritecolor: "red"};
+  }
+  static getDerivedStateFromProps(props, state) {
+    return {favoritecolor: props.favcol };
+  }
+  changeColor = () => {
+    this.setState({favoritecolor: "blue"});
+  }
+  render(){
+    return(
+      <div>
+        <h1>My color is {this.state.favoritecolor}</h1>
+        <button type="button" onclick={this.changeColor}>Change color</button>
+      </div>
+    );
+  }
+}
 root.render(
   <React.StrictMode>
-    <Header2 favcol="blue"/>
+    <Header3 favcol="yellow"/>
   </React.StrictMode>
 );
 
