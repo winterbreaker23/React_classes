@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+import Car6 from './Car';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 class Car extends React.Component{
   render(){
@@ -45,9 +45,10 @@ class Car5 extends React.Component{
     );
   }
 }
+
 root.render(
   <React.StrictMode>
-    <Car5/>
+    <Car6/>
   </React.StrictMode>
 );
 
