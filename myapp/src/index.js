@@ -19,9 +19,24 @@ class Car2 extends React.Component{
     return<h2>I am a {this.state.color} Car</h2>
   }
 }
+class Car3 extends React.Component{
+  render(){
+    return <h2>I am a {this.props.color} Car</h2>
+  }
+}
+
+class Car4 extends React.Component{
+  constructor(props){
+    super(props);
+  }
+  render(){
+    return<h2>I am a {this.props.model}!</h2>
+  }
+
+}
 root.render(
   <React.StrictMode>
-    <Car2 />
+    <Car4 model="Tiger" />
   </React.StrictMode>
 );
 
