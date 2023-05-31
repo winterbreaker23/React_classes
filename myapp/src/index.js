@@ -10,9 +10,18 @@ class Car extends React.Component{
     return <h1>This is a Car.</h1>
   }
 }
+class Car2 extends React.Component{
+  constructor(){
+    super();
+    this.state={color:"red"};
+  }
+  render(){
+    return<h2>I am a {this.state.color} Car</h2>
+  }
+}
 root.render(
   <React.StrictMode>
-    <Car />
+    <Car2 />
   </React.StrictMode>
 );
 
