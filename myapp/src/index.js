@@ -66,9 +66,23 @@ class Car7 extends React.Component{
     );
   }
 }
+class Header extends React.Component{
+  constructor(props){
+    super(props);
+    this.state = {favoritecolor:"red"};
+  }
+  static getDerivedStateFromProps(props, state){
+    return{favoritecolor:props.favcol};
+  }
+  render(){
+    return(
+      <h1>My Favourite Color is {this.state.favoritecolor}</h1>
+    );
+  }
+}
 root.render(
   <React.StrictMode>
-    <Car7/>
+    <Header favcol="blue"/>
   </React.StrictMode>
 );
 
