@@ -32,11 +32,22 @@ class Car4 extends React.Component{
   render(){
     return<h2>I am a {this.props.model}!</h2>
   }
-
+}
+class Car5 extends React.Component{
+  render(){
+    return(
+      <div>
+        <h1>
+          Who lives in my Garage
+        </h1>
+        <Car/>
+      </div>
+    );
+  }
 }
 root.render(
   <React.StrictMode>
-    <Car4 model="Tiger" />
+    <Car5/>
   </React.StrictMode>
 );
 
